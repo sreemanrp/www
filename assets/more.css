@@ -1,0 +1,31 @@
+.pic img {
+    position: absolute;
+	margin: right;
+    right: 7px;
+	height: 44px;
+	width: 44px;
+	margin-top: 0px;
+	align-items: right;
+	border-radius: 50%;
+	border :0px solid white;
+}
+
+a {
+	color: rgb(36, 96, 250);
+	font-size: 18px;
+	font-weight: 100;
+	font-style: normal;
+	font-family: sans-serif;
+	text-decoration: none;
+}
+
+.footer a {
+	color: rgb(165, 167, 169);
+	font-size: 12px;
+	font-weight: 100;
+	font-style: normal;
+	font-family: sans-serif;
+	text-decoration: underline;
+	-webkit-text-decoration-color: rgb(36, 96, 250);
+	text-decoration-color: rgb(36, 96, 250);
+}
