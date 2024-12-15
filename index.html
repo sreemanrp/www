@@ -3,32 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Designer Portfolio</title>
+    <title>Sreeman P.</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #C4C4C4;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             color: white;
             line-height: 1.6;
+            background-color: #C4C4C4;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .container {
             max-width: 600px;
-            padding: 20px;
             text-align: center;
         }
 
-        .bio-text {
+        .text-content {
             font-size: 24px;
+            font-weight: 300;
             margin: 0;
             padding: 0;
-            font-weight: 300;
+        }
+
+        .scroll-prompt {
+            opacity: 0.7;
         }
 
         a {
@@ -42,28 +50,69 @@
         }
 
         .update-text {
-            margin-top: 40px;
+            margin-top: 20px;
             font-size: 20px;
             opacity: 0.7;
         }
 
-        .scroll-text {
-            opacity: 0.7;
+        /* Navigation dots could be added here */
+        .nav-dots {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .nav-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+        }
+
+        .nav-dot.active {
+            background-color: white;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <p class="bio-text">
-            i'm a designer currently living in nyc. i've been designing different type of things for the internet, from tiny controversial experiments to larger-scale consumer products through conceptual art images i share on twitter. <span class="scroll-text">scroll down to check out my journey.</span>
-        </p>
-        <p class="bio-text" style="margin-top: 20px;">
-            DMs are opened on <a href="#">twitter</a> and
-            <a href="#">github</a>. i can do email too. love.
-        </p>
-        <p class="update-text">
-            updated on dec 16th 2024.
-        </p>
+    <section id="intro">
+        <div class="container">
+            <p class="text-content">
+                I'm a student currently living in India, In. I've been studing about ai in different type of things for the internet, from tiny controversial experiments to larger-scale consumer products through conceptual art images i share on twitter. <span class="scroll-prompt">scroll down to check out my journey.</span>
+            </p>
+        </div>
+    </section>
+
+    <section id="background">
+        <div class="container">
+            <p class="text-content">
+                born and raised in Andhra Pradesh, India. I started coding at 16 on a cracked version of ai & database. my first gigs were terrible ai & websites for my counter strike friends. aim, msn or mirc. the early days of remote work.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <p class="text-content">
+                DMs are opened on <a href="https://x.com/sreemanrp">twitter</a> and
+                <a href="https://github.com/sreemanrp">github</a>. i can do <a href="mailto:sreemanthink@gmail.com">mail</a> too. love.
+            </p>
+            <p class="update-text">
+                updated on dec 16th 2024.
+            </p>
+        </div>
+    </section>
+
+    <!-- Optional navigation dots -->
+    <div class="nav-dots">
+        <div class="nav-dot active"></div>
+        <div class="nav-dot"></div>
+        <div class="nav-dot"></div>
     </div>
 </body>
 </html>
