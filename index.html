@@ -6,113 +6,69 @@
     <title>Sreeman P.</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: white;
+            background-color: #0A0A0A;
+            color: #FFFFFF;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
-            background-color: #C4C4C4;
-        }
-
-        section {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
+            margin: 0;
+            padding: 2rem;
+            font-size: 18px;
         }
 
         .container {
-            max-width: 600px;
-            text-align: center;
+            max-width: 680px;
+            margin: 0 auto;
         }
 
-        .text-content {
-            font-size: 24px;
-            font-weight: 300;
-            margin: 0;
-            padding: 0;
+        p {
+            margin: 2rem 0;
         }
 
-        .scroll-prompt {
-            opacity: 0.7;
+        .blue-link {
+            color: #4A9EFF;
+            text-decoration: none;
         }
 
-        a {
-            color: white;
+        .orange-link {
+            color: #FF9650;
+            text-decoration: none;
+        }
+
+        .blue-link:hover, .orange-link:hover {
             text-decoration: underline;
-            text-underline-offset: 4px;
-        }
-
-        a:hover {
-            opacity: 0.8;
-        }
-
-        .update-text {
-            margin-top: 20px;
-            font-size: 20px;
-            opacity: 0.7;
-        }
-
-        /* Navigation dots could be added here */
-        .nav-dots {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .nav-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-        }
-
-        .nav-dot.active {
-            background-color: white;
         }
     </style>
 </head>
 <body>
-    <section id="intro">
-        <div class="container">
-            <p class="text-content">
-                I'm a student currently living in India. I've been studing about ai & data science in different type of things for the internet, from tiny controversial experiments to larger-scale consumer products through conceptual art images i share on twitter. <span class="scroll-prompt">scroll down to check out my journey.</span>
-            </p>
-        </div>
-    </section>
+    <div class="container">
+        <p>
+            Hey, I'm Sreeman Reddy. I'm a ai scientest, <a href="#" class="blue-link">software engineer</a>, 
+            <a href="#" class="blue-link">podcaster</a>, and <a href="#" class="blue-link">writer</a>. 
+            I'm currently building <a href="#" class="orange-link">Campsite</a>, an app that brings 
+            together a team's posts, calls, notes, and chat.
+        </p>
 
-    <section id="background">
-        <div class="container">
-            <p class="text-content">
-                Born and raised in Andhra Pradesh, India. I started coding at 16... My first Proj is based on website too counter strike friends. aim, msn or mirc. the early days of remote work.
-            </p>
-        </div>
-    </section>
+        <p>
+            Before Campsite, I spent four years designing 
+            <a href="#" class="blue-link">native mobile apps at GitHub</a>.
+        </p>
 
-    <section id="contact">
-        <div class="container">
-            <p class="text-content">
-                DMs are opened on <a href="https://x.com/sreemanrp">twitter</a> and
-                <a href="https://github.com/sreemanrp">github</a>. i can do <a href="mailto:sreemanthink@gmail.com">mail</a> too. love.
-            </p>
-            <p class="update-text">
-                updated on dec 16th 2024.
-            </p>
-        </div>
-    </section>
+        <p>
+            Before GitHub, I co-founded <a href="#" class="blue-link">Spectrum</a>, a platform for 
+            large-scale communities to have better public conversations. Spectrum was acquired by 
+            GitHub in November, 2018.
+        </p>
 
-    <!-- Optional navigation dots -->
-    <div class="nav-dots">
-        <div class="nav-dot active"></div>
-        <div class="nav-dot"></div>
-        <div class="nav-dot"></div>
+        <p>
+            Before Spectrum I designed payments experiences at Facebook, working across Facebook, 
+            Messenger, WhatsApp, and Instagram. I originally cut my teeth as the first product 
+            designer at <a href="#" class="blue-link">Buffer</a>.
+        </p>
+
+        <p>
+            I also co-host the <a href="#" class="blue-link">Design Details Podcast</a>, a weekly 
+            conversation about design process and culture.
+        </p>
     </div>
 </body>
 </html>
