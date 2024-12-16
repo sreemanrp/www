@@ -7,17 +7,21 @@
     <style>
         body {
             background-color: #0A0A0A;
-            color: #CCCCCC; /* Cement-like color */
+            color: #CCCCCC;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 2rem;
             font-size: 18px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .container {
             max-width: 680px;
             margin: 0 auto;
+            flex: 1;
         }
 
         p {
@@ -25,7 +29,7 @@
         }
 
         .blue-link {
-            color: #006EFE;
+            color: #4A9EFF;
             text-decoration: none;
         }
 
@@ -37,16 +41,17 @@
         .blue-link:hover, .orange-link:hover {
             text-decoration: underline;
         }
-        
+
         .social-links {
-            text-align: center;
-            margin: 2rem 0;
+            margin-top: auto;
+            padding-top: 2rem;
         }
 
         .social-link {
             color: #006EFE;
             text-decoration: none;
-            margin: 0 10px;
+            margin-right: 40px;
+            font-size: 18px;
         }
 
         .social-link:hover {
@@ -57,22 +62,23 @@
 <body>
     <div class="container">
         <p>
-            Hey, I'm Sreeman Reddy. I'm <a href="https://x.com/NoInternetHQ" class="blue-link">founder & ceo</a>, 
-            <a href="https://x.com/NoInternetHQ" class="blue-link">ai engineer</a>, and <a href="https://youtube.com/@NoINPodcast" class="blue-link">podcaster</a>. 
-            I'm currently studying at <a href="https://kluniversity.in" class="orange-link">KL University</a>, and bulding an app that brings 
+            Hey, I'm Sreeman Reddy. I'm <a href="#" class="blue-link">founder & ceo</a>, 
+            <a href="#" class="blue-link">ai engineer</a>, and 
+            <a href="#" class="blue-link">podcaster</a>. I'm currently studying at 
+            <a href="#" class="orange-link">KL University</a>, and building an app that brings 
             together a team's posts, calls, notes, and chat.
         </p>
 
         <p>
             Before Campsite, I spent four years designing 
-            <a href="https://github.com/sreemanrp/UniBrain" class="blue-link">native ai mobile apps at GitHub</a>.
+            <a href="#" class="blue-link">native ai mobile apps at GitHub</a>.
         </p>
 
         <p>
             I also co-host the <a href="#" class="blue-link">NoIN Podcast</a>, a monthly 
             conversation about ai process and culture.
         </p>
-        
+
         <div class="social-links">
             <a href="#" class="social-link">Twitter</a>
             <a href="#" class="social-link">YouTube</a>
