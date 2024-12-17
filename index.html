@@ -3,124 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sreeman P.</title>
+    <title>Personal Website</title>
     <style>
-        body {
-            background-color: #0A0A0A;
-            color: #7D7D7D;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             padding: 2rem;
-            font-size: 18px;
-            display: flex;
-            flex-direction: column;
+            text-align: center;
         }
-
-        .container {
-            max-width: 680px;
-            margin: 0 auto;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
+        
+        .welcome {
+            font-size: clamp(2rem, 5vw, 4rem);
+            max-width: 800px;
         }
-
-        h1 {
-            color: #A1A1A1;
-            margin: 1.5rem 0;
-            font-size: 20px;
-        }
-
-        p {
-            margin: 1.5rem 0;
-        }
-
-        .blue-link {
+        
+        .highlight {
             color: #006EFE;
+            font-style: normal;
+            text-shadow: 0 0 10px #006EFE, 0 0 20px #006EFE, 0 0 30px #006EFE;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #006EFE, 0 0 10px #006EFE, 0 0 15px #006EFE;
+            }
+            to {
+                text-shadow: 0 0 10px #006EFE, 0 0 20px #006EFE, 0 0 30px #006EFE;
+            }
+        }
+        
+        .ui-section h2 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 1rem;
+        }
+        
+        .ui-section p {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            color: #888;
+            max-width: 600px;
+        }
+        
+        .store-section h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+        
+        .store-section p {
+            color: #888;
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            background-color: #333;
+            color: #fff;
             text-decoration: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
         }
-
-        .green-link {
-            color: #1abc9c;
-            text-decoration: none;
+        
+        .cta-button:hover {
+            background-color: #444;
         }
-
-        .orange-link {
-            color: #FF4433;
-            text-decoration: none;
+        
+        .arrow {
+            margin-left: 0.5rem;
         }
-
-        .blue-link:hover, .orange-link:hover {
-            text-decoration: underline;
-        }
-
-        .social-links {
-            margin-top: auto;
-            padding-top: 1rem;
-        }
-
-        .social-link {
-            color: #006EFE;
-            text-decoration: none;
-            margin-right: 15px;
-            font-size: 18px;
-        }
-
-        .social-link:last-child {
-            margin-right: 0;
-        }
-
-        .social-link:hover {
-            text-decoration: underline;
-        }
-
-        .mail-links {
-            margin-top: auto;
-            padding-top: 1rem;
-        }
-
-        .mail-link {
-            color: #1abc9c;
-            text-decoration: none;
-            margin-right: 15px;
-            font-size: 18px;
-        }
-
-        .mail-link:last-child {
-            margin-right: 0;
-        }
-
-        .mail-link:hover {
-            text-decoration: underline;
+        
+        @media (max-width: 768px) {
+            .section {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Sreeman Reddy</h1>
-        <p>
-            I'm currently studying at 
-            <a href="https://kluniversity.inn" class="orange-link">KL University</a>. 
-            <a href="https://youtube.com/@NoINPodcast" class="blue-link">Content Creator</a> & 
-            <a href="https://youtube.com/@NoINPodcast" class="blue-link">Podcaster</a>
-            at future i want to be an <a href="https://x.com/NoInternetHQ" class="blue-link">AI Engineer</a>
-        </p>
+    <main>
+        <section class="section">
+            <h1 class="welcome">
+                Hello <span class="highlight">World</span>,<br>
+                your shortcut to everything.
+            </h1>
+        </section>
 
-        <p>
-            I spent more than two years of time designing 
-            <a href="https://github.com/sreemanrp/UniBrain" class="blue-link">Uni-Brain app</a>.
-        </p>
+        <section class="section ui-section">
+            <h2>* About Me</h2>
+            <p>I'm currently studying at KL University as AI&DS student & also I'm a Content Creator & Podcaster.</p>
+        </section>
 
-        <p>
-            I also host the <a href="https://youtube.com/@NoINPodcast" class="blue-link">Developer AI Conference Podcast</a>, a monthly 
-            conversation about AI process and culture.
-        </p>
-
-        <div class="social-links">
-            <a href="https://x.com/sreemanrp" class="social-link">Twitter</a>
-            <a href="https://github.com/sreemanrp" class="social-link">Github</a>
-            <a href="mailto:sreemanthink@gmail.com" class="mail-link">Mail</a>
-        </div>
-    </div>
+        <section class="section store-section">
+            <h2>* Project</h2>
+            <p>All my projects were available go check...</p>
+            <a href="#" class="cta-button">
+                Let's go
+                <span class="arrow">→</span>
+            </a>
+        </section>
+    </main>
 </body>
 </html>
