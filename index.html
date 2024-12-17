@@ -3,118 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
+    <title>Sreeman P.</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            background-color: #000;
-            color: #fff;
+            background-color: #0A0A0A;
+            color: #7D7D7D;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-        
-        .section {
+            margin: 0;
             padding: 2rem;
-            text-align: left;
-            max-width: 800px;
-            margin-left: 10%;
-        }
-        
-        .welcome {
-            font-size: clamp(2rem, 5vw, 4rem);
-            margin-bottom: 1rem;
-        }
-        
-        .highlight {
-            color: #006EFE;
-            font-style: normal;
-            text-shadow: 0 0 10px #006EFE, 0 0 20px #006EFE, 0 0 30px #006EFE;
-            animation: glow 1.5s ease-in-out infinite alternate;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
         }
 
-        .subtext {
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            color: #888;
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
-        .subtext a {
+        h1 {
+            color: #A1A1A1;
+            margin: 1.5rem 0;
+            font-size: 20px;
+        }
+
+        p {
+            margin: 1.5rem 0;
+        }
+
+        .blue-link {
             color: #006EFE;
             text-decoration: none;
         }
 
-        .subtext a:hover {
+        .green-link {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+
+        .orange-link {
+            color: #FF4433;
+            text-decoration: none;
+        }
+
+        .blue-link:hover, .orange-link:hover {
             text-decoration: underline;
         }
 
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 5px #006EFE, 0 0 10px #006EFE, 0 0 15px #006EFE;
-            }
-            to {
-                text-shadow: 0 0 10px #006EFE, 0 0 20px #006EFE, 0 0 30px #006EFE;
-            }
-        }
-        
-        .secret-mode {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            color: #006EFE;
-            justify-content: center;
-            align-items: center;
-            font-size: 2rem;
-            z-index: 1000;
+        .social-links {
+            margin-top: auto;
+            padding-top: 1rem;
         }
 
-        @media (max-width: 768px) {
-            .section {
-                padding: 1rem;
-                margin-left: 5%;
-            }
+        .social-link {
+            color: #006EFE;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        .social-link:last-child {
+            margin-right: 0;
+        }
+
+        .social-link:hover {
+            text-decoration: underline;
+        }
+
+        .mail-links {
+            margin-top: auto;
+            padding-top: 1rem;
+        }
+
+        .mail-link {
+            color: #1abc9c;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        .mail-link:last-child {
+            margin-right: 0;
+        }
+
+        .mail-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <main>
-        <section class="section">
-            <h1 class="welcome">
-                Hello <span class="highlight">World</span>,<br>
-                your shortcut to everything.
-            </h1>
-            <p class="subtext">
-                I'm currently studying at <a href="https://www.kluniversity.in/" target="_blank">KL University</a> as AI&DS student, I'm also a <a href="#" target="_blank">content creator</a> & <a href="#" target="_blank">podcaster</a>.
-            </p>
-        </section>
-    </main>
-    <div class="secret-mode">
-        Secret Mode Activated!
-    </div>
-    <script>
-        document.addEventListener('keydown', function(event) {
-            if ((event.metaKey && event.key === 's') || (event.key === 's' && event.altKey)) {
-                event.preventDefault();
-                document.querySelector('.secret-mode').style.display = 'flex';
-            }
-        });
+    <div class="container">
+        <h1>Sreeman Reddy</h1>
+        <p>
+            I'm currently studying at 
+            <a href="https://kluniversity.inn" class="orange-link">KL University</a>. 
+            <a href="https://youtube.com/@NoINPodcast" class="blue-link">Content Creator</a> & 
+            <a href="https://youtube.com/@NoINPodcast" class="blue-link">Podcaster</a>
+            at future i want to be an <a href="https://x.com/NoInternetHQ" class="blue-link">AI Engineer</a>
+        </p>
 
-        document.addEventListener('keyup', function(event) {
-            if (event.key === 'Escape') {
-                document.querySelector('.secret-mode').style.display = 'none';
-            }
-        });
-    </script>
+        <p>
+            I spent more than two years of time designing 
+            <a href="https://github.com/sreemanrp/UniBrain" class="blue-link">Uni-Brain app</a>.
+        </p>
+
+        <p>
+            I also host the <a href="https://youtube.com/@NoINPodcast" class="blue-link">Developer AI Conference Podcast</a>, a monthly 
+            conversation about AI process and culture.
+        </p>
+
+        <div class="social-links">
+            <a href="https://x.com/sreemanrp" class="social-link">Twitter</a>
+            <a href="https://github.com/sreemanrp" class="social-link">Github</a>
+            <a href="mailto:sreemanthink@gmail.com" class="mail-link">Mail</a>
+        </div>
+    </div>
 </body>
 </html>
-
