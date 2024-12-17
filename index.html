@@ -30,6 +30,7 @@
         
         .welcome {
             font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: 1rem;
         }
         
         .highlight {
@@ -37,6 +38,20 @@
             font-style: normal;
             text-shadow: 0 0 10px #006EFE, 0 0 20px #006EFE, 0 0 30px #006EFE;
             animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        .subtext {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: #888;
+        }
+
+        .subtext a {
+            color: #006EFE;
+            text-decoration: none;
+        }
+
+        .subtext a:hover {
+            text-decoration: underline;
         }
 
         @keyframes glow {
@@ -48,6 +63,21 @@
             }
         }
         
+        .secret-mode {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #006EFE;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            z-index: 1000;
+        }
+
         @media (max-width: 768px) {
             .section {
                 padding: 1rem;
@@ -63,8 +93,28 @@
                 Hello <span class="highlight">World</span>,<br>
                 your shortcut to everything.
             </h1>
+            <p class="subtext">
+                I'm currently studying at <a href="https://www.kluniversity.in/" target="_blank">KL University</a> as AI&DS student, I'm also a <a href="#" target="_blank">content creator</a> & <a href="#" target="_blank">podcaster</a>.
+            </p>
         </section>
     </main>
+    <div class="secret-mode">
+        Secret Mode Activated!
+    </div>
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if ((event.metaKey && event.key === 's') || (event.key === 's' && event.altKey)) {
+                event.preventDefault();
+                document.querySelector('.secret-mode').style.display = 'flex';
+            }
+        });
+
+        document.addEventListener('keyup', function(event) {
+            if (event.key === 'Escape') {
+                document.querySelector('.secret-mode').style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
 
