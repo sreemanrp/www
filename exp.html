@@ -1,38 +1,246 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html dir="ltr" lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Exchange</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
 
-  <head>
-    <link rel="preload" as="image" href="https://react-email-demo-k6qpz0pxq-resend.vercel.app/static/raycast-logo.png" />
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-    <meta name="x-apple-disable-message-reformatting" /><!--$-->
-  </head>
-  <div style="display:none;overflow:hidden;line-height:1px;opacity:0;max-height:0;max-width:0">Log in with this magic link.<div> ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿</div>
-  </div>
+        body {
+            background-color: black;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-  <body style="background-color:#ffffff;font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Roboto,Oxygen-Sans,Ubuntu,Cantarell,&quot;Helvetica Neue&quot;,sans-serif">
-    <table align="center" width="100%" border="0" cellPadding="0" cellSpacing="0" role="presentation" style="max-width:37.5em;margin:0 auto;padding:20px 25px 48px;background-image:url(&quot;/assets/raycast-bg.png&quot;);background-position:bottom;background-repeat:no-repeat, no-repeat">
-      <tbody>
-        <tr style="width:100%">
-          <td><img alt="Raycast" height="48" src="https://react-email-demo-k6qpz0pxq-resend.vercel.app/static/raycast-logo.png" style="display:block;outline:none;border:none;text-decoration:none" width="48" />
-            <h1 style="font-size:28px;font-weight:bold;margin-top:48px">🪄 Your magic link</h1>
-            <table align="center" width="100%" border="0" cellPadding="0" cellSpacing="0" role="presentation" style="margin:24px 0">
-              <tbody>
-                <tr>
-                  <td>
-                    <p style="font-size:16px;line-height:26px;margin:16px 0"><a href="https://raycast.com" style="color:#FF6363;text-decoration-line:none" target="_blank">👉 Click here to sign in 👈</a></p>
-                    <p style="font-size:16px;line-height:26px;margin:16px 0">If you didn&#x27;t request this, please ignore this email.</p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <p style="font-size:16px;line-height:26px;margin:16px 0">Best,<br />- Raycast Team</p>
-            <hr style="width:100%;border:none;border-top:1px solid #eaeaea;border-color:#dddddd;margin-top:48px" /><img height="32" src="https://react-email-demo-k6qpz0pxq-resend.vercel.app/static/raycast-logo.png" style="display:block;outline:none;border:none;text-decoration:none;-webkit-filter:grayscale(100%);filter:grayscale(100%);margin:20px 0" width="32" />
-            <p style="font-size:12px;line-height:24px;margin:16px 0;color:#8898aa;margin-left:4px">Raycast Technologies Inc.</p>
-            <p style="font-size:12px;line-height:24px;margin:16px 0;color:#8898aa;margin-left:4px">2093 Philadelphia Pike #3222, Claymont, DE 19703</p>
-          </td>
-        </tr>
-      </tbody>
-    </table><!--/$-->
-  </body>
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 2rem 8rem 2rem; /* Increased bottom padding */
+        }
 
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: black;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #666;
+            border: 1px solid #333;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 2rem;
+        }
+
+        .social-posts {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 6rem; /* Added bottom margin */
+            padding: 0 1rem;
+        }
+
+        .post {
+            background: #111;
+            border-radius: 1rem;
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .post:hover {
+            transform: translateY(-5px);
+        }
+
+        .post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .post-content {
+            padding: 1.5rem;
+        }
+
+        .post-text {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .post-platform {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #444;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            padding: 4rem 2rem;
+            margin-top: auto;
+        }
+
+        .contact-info {
+            margin-bottom: 3rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            width: 100px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            gap: 0.5rem 2rem;
+            align-items: start;
+        }
+
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            color: #666;
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .social-posts {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="hero">
+        <img src="IMG_0824.jpeg" alt="Cube Logo" class="logo">
+        <h1>Don't Just Exchange.<br>Stack Change.</h1>
+        <div class="buttons">
+            <a href="#" class="btn btn-primary">Join Cube</a>
+            <a href="#" class="btn btn-secondary">Download app</a>
+        </div>
+
+        <div class="social-posts">
+            <div class="post">
+                <img src="/placeholder.svg?height=200&width=300" alt="Twitter Post Image">
+                <div class="post-content">
+                    <p class="post-text">Exciting news! We're launching a new feature that will revolutionize how you trade. Stay tuned for more updates coming soon! #CubeExchange #Trading</p>
+                    <div class="post-platform">
+                        <span>𝕏</span>
+                        <span>@CubeExchange</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <img src="/placeholder.svg?height=200&width=300" alt="Discord Community Image">
+                <div class="post-content">
+                    <p class="post-text">Join our growing Discord community! Connect with traders, get exclusive updates, and participate in community events. Let's build together!</p>
+                    <div class="post-platform">
+                        <span>💬</span>
+                        <span>Cube Community</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>401 N Morgan Street Suite 300</p>
+            <p>Chicago IL</p>
+            <p>60642</p>
+        </div>
+
+        <div class="footer-content">
+            <img src="IMG_0824.jpeg" alt="Cube Logo" class="footer-logo">
+            
+            <div class="footer-links">
+                <a href="#">Legal</a>
+                <a href="#">News</a>
+                <a href="#">Developers</a>
+                <a href="#">Careers</a>
+                <a href="#">Privacy</a>
+            </div>
+
+            <div class="social-links">
+                <a href="#" aria-label="X (Twitter)">𝕏</a>
+                <a href="#" aria-label="Instagram">📷</a>
+                <a href="#" aria-label="Discord">💬</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2024 Cube Exchange Australia Pty Ltd, All rights reserved.
+        </div>
+    </footer>
+</body>
 </html>
+
