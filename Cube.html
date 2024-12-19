@@ -66,6 +66,49 @@
             height: 150px;
             margin-bottom: 2rem;
         }
+        
+        .social-posts {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            padding: 0 1rem;
+        }
+
+        .post {
+            background: #111;
+            border-radius: 1rem;
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .post:hover {
+            transform: translateY(-5px);
+        }
+
+        .post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .post-content {
+            padding: 1.5rem;
+        }
+
+        .post-text {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .post-platform {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #444;
+            font-size: 0.9rem;
+        }
 
         footer {
             padding: 4rem 2rem;
@@ -129,6 +172,17 @@
         <div class="buttons">
             <a href="https://discord.gg/cubenoin" class="btn btn-primary">Discord</a>
             <a href="https://x.com/NoInternetHQ" class="btn btn-secondary">Twitter / X</a>
+        </div>
+        <div class="social-posts">
+            <div class="post">
+                <img src="/placeholder.svg?height=200&width=300" alt="Twitter Post Image">
+                <div class="post-content">
+                    <p class="post-text">Exciting news! We're launching a new feature that will revolutionize how you trade. Stay tuned for more updates coming soon! #CubeExchange #Trading</p>
+                    <div class="post-platform">
+                        <span>@Cube</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
