@@ -67,6 +67,34 @@
             animation: blink 1s infinite;
         }
 
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-logo {
+            width: 100px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #006EFE;
+        }
+
+
         @keyframes blink {
             0% { opacity: 1; }
             50% { opacity: 0; }
@@ -89,12 +117,24 @@
             <div class="line">&nbsp;</div>
             <div class="line">
                 <a href="https://sreeman.xyz/call" class="cta-link">
-                    Schedule a call <span style="font-size: 44px;">↗</span>
+                    Schedule a call <span style="font-size: 34px;">↗</span>
                     <span class="blinking-rectangle"></span>
                 </a>
             </div>
         </div>
     </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Legal</a>
+                <a href="#">News</a>
+                <a href="#">Privacy</a>
+            </div>
+          
+        </div>
+    </footer>
+    
 </body>
 </html>
 
