@@ -55,43 +55,22 @@
         }
 
         .social-links {
-            margin-top: auto;
-            padding-top: 1rem;
+            margin-top: 2rem;
         }
 
-        .social-link {
-            color: #006EFE;
+        .social-links a {
+            display: flex;
+            align-items: center;
+            color: #fff;
             text-decoration: none;
-            margin-right: 15px;
-            font-size: 18px;
+            font-size: 1rem;
+            margin-bottom: 1rem;
         }
 
-        .social-link:last-child {
-            margin-right: 0;
-        }
-
-        .social-link:hover {
-            text-decoration: underline;
-        }
-
-        .mail-links {
-            margin-top: auto;
-            padding-top: 1rem;
-        }
-
-        .mail-link {
-            color: #1abc9c;
-            text-decoration: none;
-            margin-right: 15px;
-            font-size: 18px;
-        }
-
-        .mail-link:last-child {
-            margin-right: 0;
-        }
-
-        .mail-link:hover {
-            text-decoration: underline;
+        .social-links a::before {
+            content: "↗";
+            margin-right: 0.5rem;
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -117,9 +96,10 @@
         </p>
 
         <div class="social-links">
-            <a href="https://x.com/sreemanrp" class="social-link">Twitter</a>
-            <a href="https://github.com/sreemanrp" class="social-link">Github</a>
-            <a href="mailto:sreemanthink@gmail.com" class="mail-link">Mail</a>
+            <a href="https://x.com/sreemanrp" target="_blank" rel="noopener noreferrer">Twitter/X</a>
+            <a href="https://instagram.com/sreemanrp" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://arova.com/sreemanrp" target="_blank" rel="noopener noreferrer">Arova</a>
+            <a href="https://github.com/sreemanrp" target="_blank" rel="noopener noreferrer">Github</a>
         </div>
     </div>
 </body>
