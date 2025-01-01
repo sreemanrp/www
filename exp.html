@@ -89,6 +89,45 @@
             font-weight: 100;
             font-family: "Playfair Display", serif;
         }
+        
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .button {
+            padding: 16px 32px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            min-width: 200px;
+            text-align: center;
+            transition: all 0.2s ease;
+            text-decoration: none; /* Remove underline from links */
+            display: inline-block; /* Make links behave like buttons */
+        }
+
+        .primary {
+            background-color: #000;
+            color: white;
+            border: none;
+        }
+
+        .primary:hover {
+            background-color: #333;
+        }
+
+        .secondary {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+        }
+
+        .secondary:hover {
+            background-color: #f5f5f5;
+        }
 
         /* FAQ Section */
         .faq {
@@ -196,6 +235,11 @@
                 <p>Privacy-first AI that helps you create in confidence.</p>
             </div>
         </section>
+
+        <div class="button-container">
+            <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="button primary">Get started</a>
+            <a href="https://example.com/demo" target="_blank" rel="noopener noreferrer" class="button secondary">Request demo</a>
+        </div>
 
         <!-- Meet Claude Section -->
         <section class="container">
