@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontman AI</title>
+    <title>Claude AI</title>
     <style>
         /* Reset and base styles */
         * {
@@ -13,158 +13,243 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-            line-height: 1.6;
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            
-            display: flex;
-            flex-direction: column;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
+            color: #2D2D2D;
+            background: #FFFFFF;
         }
 
-        /* Header styles */
-        header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 4rem;
-        }
-
-        .site-title {
-            font-size: 1.5rem;
-            font-weight: 500;
-        }
-        /* Main content styles */
-        main {
-            flex: 1;
-        }
-
+        /* Typography */
         h1 {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            font-weight: 500;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            margin-bottom: 1rem;
+            line-height: 1.2;
         }
 
         h2 {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            font-weight: 500;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
         }
 
-        .intro {
+        h3 {
             font-size: 1.5rem;
-            margin-bottom: 4rem;
-            max-width: 800px;
-        }
-
-        .blog-post {
-            margin-top: 2rem;
-        }
-
-        .blog-date {
-            color: #666;
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .blog-title {
-            font-size: 1rem;
-            margin-bottom: 3rem;
-            text-decoration: none;
-        }
-
-        .blog-title a {
-            color: white;
-            font-size: 1rem;
-            margin-bottom: 3rem;
-            text-decoration: none;
-        }
-
-        /* Social links styles */
-        .social-links {
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            color: #fff;
-            text-decoration: none;
-            font-size: 1rem;
+            font-weight: 400;
             margin-bottom: 1rem;
         }
 
-        .social-links a::before {
-            content: "↗";
-            margin-right: 0.5rem;
-            font-size: 1rem;
+        p {
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+            color: #4A4A4A;
         }
 
-        /* Footer styles */
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 6rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 4rem;
+            font-size: 2rem;
+        }
+
+        .logo-icon {
+            color: #FF7262;
+            font-size: 2rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #EAEAEA;
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.25rem;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+        }
+
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            color: #4A4A4A;
+        }
+
+        /* Footer */
         footer {
-            margin-top: 1rem;
-            color: #666;
-            font-size: 1rem;
+            background: #000000;
+            color: #FFFFFF;
+            padding: 4rem 0;
+            margin-top: 4rem;
         }
 
-        /* Link underline effect */
-        .underline {
-            text-decoration: underline;
-            text-decoration-thickness: 2px;
-            text-underline-offset: 2px;
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
         }
 
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem;
-            }
+        .footer-links {
+            list-style: none;
+        }
 
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-            }
+        .footer-links li {
+            margin-bottom: 1rem;
+        }
 
-            h1 {
-                font-size: 1.5rem;
-            }
+        .footer-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
 
-            .intro {
-                font-size: 1rem;
-            }
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.875rem;
+            opacity: 0.6;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <span class="site-title">Frontman AI</span>
-        </div>
-    </header>
-
     <main>
-        <p class="intro">
-           I'm the founder and CTO of <span class="underline">S.H.I.E.L.D.</span> an AI & Robotics based platform. This website is a collection of things that I learn and build.
-        </p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-icon">✱</span>
+                    <span>Claude</span>
+                </div>
+                <h1>Your ideas,<br>amplified</h1>
+                <p>Privacy-first AI that helps you create in confidence.</p>
+            </div>
+        </section>
 
-        <div class="blog-post">
-            <div class="blog-date">Join Frontman AI</div>
-            <h2 class="blog-title"><a href="https://discord.gg/frontman">Frontman Community</a></h2>
-        </div>
+        <!-- Meet Claude Section -->
+        <section class="container">
+            <h2>Meet Claude</h2>
+            <p>Claude is a next generation AI assistant built by Anthropic and trained to be safe, accurate, and secure to help you do your best work.</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon">📝</span>
+                    <div>
+                        <h3>Create with Claude</h3>
+                        <p>Draft and iterate on websites, graphics, documents, and code alongside your chat with Artifacts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="social-links">
-            <a href="https://x.com/fr0ntmanaI" target="_blank" rel="noopener noreferrer">Twitter/X</a>
-            <a href="https://instagram.com/frontmanai" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://shield.com/frontmanai" target="_blank" rel="noopener noreferrer">Arova</a>
-            <a href="https://github.com/frontmanai" target="_blank" rel="noopener noreferrer">Github</a>
-        </div>
+        <!-- FAQ Section -->
+        <section class="container">
+            <h2>Frequently asked questions</h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question">What is Claude and how does it work?</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What should I use Claude for?</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How much does it cost to use?</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="container">
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon">📚</span>
+                    <div>
+                        <h3>Bring your knowledge</h3>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">👥</span>
+                    <div>
+                        <h3>Share and collaborate with your team</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        © 2025 Frontman AI.
+        <div class="container">
+            <div class="footer-grid">
+                <ul class="footer-links">
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+                <ul class="footer-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Your Privacy Choices</a></li>
+                    <li><a href="#">Responsible Disclosure Policy</a></li>
+                    <li><a href="#">Compliance</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>This site is protected by reCAPTCHA Enterprise.<br>
+                The Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
