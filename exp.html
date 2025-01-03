@@ -3,15 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-    <title>Quell</title>
+    <title>Interface Designer Portfolio</title>
     <style>
-        /* Reset and base styles */
+        /* Reset default styles */
         * {
             margin: 0;
             padding: 0;
@@ -19,280 +13,86 @@
         }
 
         body {
-            font-family: "JetBrains Mono", serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.5;
-            color: #2D2D2D;
-            background: #fcf8f2;
-        }
-
-        /* Typography */
-        h1 {
-            font-family: "Playfair Display", serif;
-            font-size: clamp(3.5rem, 5vw, 6rem);
-            font-weight: 400;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        h2 {
-            font-family: "Playfair Display", serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-size: 24px;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-        }
-
-        h3 {
-            font-family: "Playfair Display", serif;
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-        }
-
-        p {
-            font-size: 1.125rem;
-            margin-bottom: 1.5rem;
-            color: #4A4A4A;
-        }
-
-        /* Layout */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        section {
-            padding: 4rem 0;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 6rem 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 4rem;
-            font-family: "Playfair Display", serif;
-            gap: 0.5rem;
-            font-size: 2rem;
-            font-weight: 100;
-        }
-
-        .logo-icon {
-            color: #FF7262;
-            font-size: 2rem;
-            font-weight: 100;
-            font-family: "Playfair Display", serif;
-        }
-        
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding: 20px;
-        }
-
-        .button {
-            padding: 20px 32px;
-            font-size: 16px;
-            border-radius: 15px;
-            cursor: pointer;
-            min-width: 10px;
-            text-align: left;
-            transition: all 0.2s ease;
-            text-decoration: none; /* Remove underline from links */
-            display: inline-block; /* Make links behave like buttons */
-        }
-
-        .primary {
-            background-color: #000;
-            color: white;
-            border: none;
-        }
-
-        .primary:hover {
-            background-color: #333;
-        }
-
-        .secondary {
-            background-color: white;
-            color: black;
-            border: 1px solid black;
-        }
-
-        .secondary:hover {
-            background-color: #f5f5f5;
-        }
-
-        /* FAQ Section */
-        .faq {
+            padding: 2rem;
             max-width: 800px;
             margin: 0 auto;
         }
 
-        .faq-item {
-            border-bottom: 1px solid #EAEAEA;
-            padding: 1.5rem 0;
+        /* Name styling */
+        .name {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
         }
 
-        .faq-question {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            font-size: 12px:
+        .name::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #000;
         }
 
-        .faq-question::after {
-            content: '+';
-            font-size: 1.5rem;
+        /* Bio text styling */
+        .bio {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 4rem;
+            max-width: 600px;
         }
 
-        /* Features Section */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
+        /* Work section styling */
+        .work-section {
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #999;
+            position: relative;
+            display: inline-block;
         }
 
-        .feature {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
+        .work-section::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #999;
         }
 
-        .feature-icon {
-            font-size: 1.5rem;
-            color: #4A4A4A;
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding: 1.5rem;
+            }
+
+            .name,
+            .bio,
+            .work-section {
+                font-size: 2rem;
+            }
         }
 
-        /* Footer */
-        footer {
-            background: #000000;
-            color: #FFFFFF;
-            padding: 4rem 0;
-            margin-top: 4rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 1.25rem;
-        }
-
-        .footer-links a {
-            color: #FFFFFF;
-            text-decoration: none;
-            opacity: 0.7;
-            transition: opacity 0.2s;
-            font-size: 14px;
-        }
-
-        .footer-links a:hover {
-            opacity: 1;
-        }
-
-        .footer-bottom {
-            color: #FF7262;
-            margin-top: 4rem;
-            font-size: 1rem;
-            opacity: 0.7;
-        }
-
-        .footer-bottom p {
-            color: #FF7262;
-            margin-top: 4rem;
-            font-size: 1rem;
-            opacity: 0.7;
+        @media (max-width: 480px) {
+            .name,
+            .bio,
+            .work-section {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="logo">
-                    <span class="logo-icon">✱</span>
-                    <span>Quell</span>
-                </div>
-                <h1>Your ideas,<br>amplified</h1>
-                <p>Privacy-first AI that helps you create in confidence.</p>
-            </div>
-        </section>
-
-        <div class="button-container">
-            <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="button primary">Get started</a>
-            <a href="https://example.com/demo" target="_blank" rel="noopener noreferrer" class="button secondary">Request demo</a>
-        </div>
-
-        <br>
-        <br>
-        <br>
-
-        <!-- Meet Claude Section -->
-        <section class="container">
-            <h2>Meet Quell</h2>
-            <p>Quell is a next generation AI assistant built by Anthropic and trained to be safe, accurate, and secure to help you do your best work.</p>
-
-            <h2>Create with Quell</h2>
-            <p>Draft and iterate on websites, graphics, documents, and code alongside your chat with Artifacts.</p>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="container">
-            <h2>Frequently asked questions</h2>
-            <div class="faq">
-                <div class="faq-item">
-                    <div class="faq-question">Who is Quell?</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">What should I use Quell for?</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">How much does it cost to use?</div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer>
-    <div class="container">
-        <div class="footer-grid">
-            <ul class="footer-links">
-                <li><a href="#">Support</a></li>
-                <li><a href="#">Status</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">YouTube</a></li>
-            </ul>
-            <ul class="footer-links">
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                </ul>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2025 Quell Inc.</p>
-        </div>
-    </div>
-</footer>
+    <h1 class="name">Sreeman Reddy</h1>
+    
+    <p class="bio">I'm an interface designer based in London and Cupertino.</p>
+    
+    <h2 class="work-section">Work 2020—2023</h2>
 </body>
 </html>
-
