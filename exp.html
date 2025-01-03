@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interface Designer Portfolio</title>
+    <title>Sreeman P.</title>
     <style>
         /* Reset default styles */
         * {
@@ -18,25 +18,16 @@
             padding: 2rem;
             max-width: 800px;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         /* Name styling */
         .name {
-            font-size: 24px;
+            font-size: 2.5rem;
             font-weight: 400;
             margin-bottom: 2rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .name::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background-color: #000;
         }
 
         /* Bio text styling */
@@ -47,23 +38,29 @@
             max-width: 600px;
         }
 
-        /* Work section styling */
-        .work-section {
-            font-size: 2.5rem;
-            font-weight: 400;
-            color: #999;
-            position: relative;
-            display: inline-block;
+        /* Navigation styling */
+        .nav {
+            margin-top: auto;
+            margin-bottom: 1rem;
         }
 
-        .work-section::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background-color: #999;
+        .nav a {
+            font-size: 2.5rem;
+            color: #000;
+            text-decoration: none;
+            margin-right: 2rem;
+            font-weight: 400;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Copyright styling */
+        .copyright {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 2rem;
         }
 
         /* Responsive adjustments */
@@ -74,7 +71,7 @@
 
             .name,
             .bio,
-            .work-section {
+            .nav a {
                 font-size: 2rem;
             }
         }
@@ -82,8 +79,13 @@
         @media (max-width: 480px) {
             .name,
             .bio,
-            .work-section {
+            .nav a {
                 font-size: 1.5rem;
+            }
+
+            .nav a {
+                display: block;
+                margin-bottom: 1rem;
             }
         }
     </style>
@@ -93,9 +95,11 @@
     
     <p class="bio">I'm an AI developer<br> based in India.</p>
     
-    <h2 class="work-section">About</h2>
-    <h2 class="work-section">Work</h2>
+    <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+    </nav>
 
-    <p>© Sreeman.</p>
+    <p class="copyright">© Sreeman P.</p>
 </body>
 </html>
