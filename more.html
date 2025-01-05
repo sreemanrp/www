@@ -121,7 +121,7 @@ h1 {
     <div class="ctas">
         <div class="subscribe-btn-wrapper">
             <div class="subscribe-btn">
-                <a href="https://youtube.com/@sreemanrp">
+                <a href="https://youtube.com/@sreemanrp" oonclick="playSound()">
                     <h1 style>
                         <div class="line" style="display: block; text-align: start; width: 100%;"><span
                                 style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">Subscribe</span>
@@ -132,7 +132,7 @@ h1 {
         </div>
         <div class="divider" style="color: white; clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);"></div>
         <div class="pro-btn-wrapper">
-            <a href="https://sreemanrp.gumroad.com/l/sreemanrppro">
+            <a href="https://sreemanrp.gumroad.com/l/sreemanrppro" oonclick="playSound()">
                 <h1 style>
                     <div class="line" style="display: block; text-align: start; width: 100%;"><span
                             style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">GetPRO</span>
@@ -141,6 +141,19 @@ h1 {
             </a>
         </div>
     </div>
+
+    <audio id="clickSound" preload="auto">
+        <source src="https://www.savoirfaire.nyc/_nuxt/hover.b226066e.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+        function playSound() {
+            const sound = document.getElementById('clickSound');
+            sound.currentTime = 0;
+            sound.play();
+        }
+    </script>
 
 </body>
 </html>
